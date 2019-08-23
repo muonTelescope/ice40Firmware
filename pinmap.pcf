@@ -1,0 +1,26 @@
+# example.pcf
+
+# Channels as inputs
+
+set_io --warn-no-port CH0 26
+set_io --warn-no-port CH1 27
+set_io --warn-no-port CH2 29
+set_io --warn-no-port CH3 30
+set_io --warn-no-port CH4 31
+set_io --warn-no-port CH5 32
+set_io --warn-no-port CH6 1
+set_io --warn-no-port CH7 2
+
+# Output to Pi
+
+set_io --warn-no-port gpioSDO 13 # Pin 13 is SDI on FPGA -> Pin 19, GPIO10, WiringPi 12, MOSI on RaspberryPi
+set_io --warn-no-port gpioSDI 12 # Pin 12 is SDO on FPGA -> Pin 21, GPIO09, WiringPi 13, MISO on RaspberryPi
+set_io --warn-no-port gpioSCK 15 # Pin 15 is SCK on FPGA -> Pin 23, GPIO11, WiringPi 14, SCK  on RaspberryPi
+set_io --warn-no-port gpioSS  14 # Pin 14 is SS  on FPGA -> Pin 15, GPIO22, WiringPi 03, SS   on RaspberryPi
+
+set_io --warn-no-port CLK     23 # Pin 23 on FPGA -> Pin 07, GPIO4, WiringPi 07, CLK on RaspberryPi
+
+set_io --warn-no-port gpio18  22 # Pin 22 on FPGA -> Pin 12, GPIO18, WiringPi 01 on RaspberryPi 
+set_io --warn-no-port gpio17  20 # Pin 20 on FPGA -> Pin 11, GPIO17, WiringPi 00 on RaspberryPi
+set_io --warn-no-port gpio27  19 # Pin 19 on FPGA -> Pin 13, GPIO27, WiringPi 02 on RaspberryPi
+set_io --warn-no-port gpio23  18 # Pin 18 on FPGA -> Pin 16, GPIO23, WiringPi 04 on RaspberryPi
